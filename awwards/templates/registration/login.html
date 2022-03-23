@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{%load static%}
+
+{% block content %}
+<div class="container"><br><br>
+    <div class="row sign-up">
+    <img src="{% static 'images/Awards.jpg' %}" width="500" height="500" >
+    <div class="col-md-2">
+  </div>
+        <div class="col-md-4">
+            {% if form.errors %}
+            <p class="small">Password or Username is incorrect</p>
+            {% endif %} 
+            <div class="section">
+                <h1 style='color:#8a3ab9'><b>Awwards</b></h1>
+                <div class="form-section">
+                    <form action="/accounts/login/" method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary btn-lg" value="Login">
+                        </div>
+                        <input type="hidden" name="next" value="{{next}}">
+                    </form>
+                </div>
+            </div>
+            <div class="section">
+                <p>Don't have an account? <a href="{% url 'register' %}">Sign-Up Here</a> <p><a href="">Terms and Conditions</a></p>
+            </div>
+        </div>
+          <div class="col-md-6">
+        </div>
+    </div>
+</div>
+{% endblock %}
