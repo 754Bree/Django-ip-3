@@ -3,7 +3,7 @@
 [Briana Odhiambo](https://github.com/754Bree/)
 
 ## Live Link
-* [here] (**)
+* [here] (https://wardsaward.herokuapp.com/)
 
 ## Description
  Awwwards is a project made to enable users to register and post their projects. The users can also rate other existing projects on the website based on design, usability and content.
